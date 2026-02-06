@@ -10,7 +10,7 @@ $person = [
     "name" => "Valentine",
     "surname" => "Green",
     "age" => 25,
-    $pets = [ "dog",
+    "pets" = [ "dog",
               "cat",
               "bird",
         ]
