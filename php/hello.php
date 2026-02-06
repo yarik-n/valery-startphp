@@ -2,5 +2,5 @@
 echo "Hello World!";
 echo "Hello";
 echo 1+2;
-$countries = "Canada,Italy";
-echo $countries[1];
+$countries = ["Canada","Italy","Australia","United States"];
+echo $countries[2];
