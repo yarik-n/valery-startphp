@@ -16,4 +16,4 @@ $person = [
     ]
     ];
 
-echo $person["pets"][3];
+echo $person['pets'][2];
