@@ -17,3 +17,4 @@ $person = [
     ];
 
 echo $person['pets'][2];
+echo $person['name'];
