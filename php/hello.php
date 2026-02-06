@@ -1,4 +1,4 @@
 <?php
 echo "Hello World!";
 echo "Hello";
-$name = 1+2;
+echo 1+2;
