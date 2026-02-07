@@ -18,3 +18,14 @@ $person = [
 
 echo $person['pets'][2];
 echo $person['name'];
+foreach ($countries as $country){
+    echo $country;
+}
+
+foreach ($pets as $pet){
+    echo $pet;
+}
+
+foreach ($person as $person){
+    echo $person;
+}
