@@ -25,7 +25,3 @@ foreach ($countries as $country){
 foreach ($pets as $pet){
     echo $pet;
 }
-
-foreach ($person as $person){
-    echo $person;
-}
