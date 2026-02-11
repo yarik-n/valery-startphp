@@ -1,7 +1,7 @@
 <?php
-$pdo = new PDO("mysql:host=localhost;dbname=valery", "valery", '');
+$pdo = new PDO("mysql:host=localhost;dbname=valery", "valery-startphp", '');
 
-$sql = "INSERT INTO users (введите_имя) VALUES (:введите_имя)";
+$sql = "INSERT INTO users (username) VALUES (:username)";
 $statment = $pdo->prepare($sql);
 $statment->execute($_POST);
 
