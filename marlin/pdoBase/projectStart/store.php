@@ -1,5 +1,5 @@
 <?php
-$pdo = new PDO('mysql:host=localhost;dbname=sandbox', "root", '');
+$pdo = new PDO('mysql:host=localhost;dbname=sandbox', "root", 'password');
 
 $sql = "INSERT INTO users (username) VALUES (:username)";
 $statment = $pdo->prepare($sql);
