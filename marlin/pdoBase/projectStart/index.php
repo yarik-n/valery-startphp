@@ -1,3 +1,10 @@
+<?php
+$pdo = new PDO('mysql:host=MySQL-8.4;dbname=users', "root", '');
+$statment = $pdo->prepare("SELECT * FROM users");
+$statment->execute();
+$users = $statment->fetchAll(PDO::FETCH_ASSOC);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,28 +21,27 @@
 	<div>
 		<table>
 			<thead>
-			<th>id</th>
-			<th>Имя</th>
-			<th>Фамилия</th>
-			<th>user name</th>
-			<th>Дата создания</th>
-			<th>Дата изменения</th>
-			<th>Action</th>
+			<th>name</th>
+			<th>surname</th>
+			<th>username</th>
+			<th>email</th>
 			</thead>
+
 			<tbody class="tbody">
-			<tr>
-				<td>1</td>
-				<td>имя</td>
-				<td>Фамилия</td>
-				<td>user_name</td>
-				<td>20.01.2026</td>
-				<td></td>
-				<td>
-					<a class="btn__show" href="#">Show</a>
-					<a class="btn__edit" href="#">Edit</a>
-					<a class="btn__delete" href="#">Delete</a>
-				</td>
-			</tr>
+                <?php foreach($users as $user):?>
+                    <tr>
+				        <td><?php echo $user['name'];?></td>
+				        <td><?php echo $user['surname'];?></td>
+                        <td><?php echo $user['username'];?></td>
+				        <td><?php echo $user['email'];?></td>
+				        <td>
+					        <a class="btn__show" href="#">Show</a>
+					        <a class="btn__edit" href="#">Edit</a>
+					        <a class="btn__delete" href="#">Delete</a>
+				        </td>
+			        </tr>
+
+                <?php endforeach;?>
 			</tbody>
 		</table>
 	</div>
