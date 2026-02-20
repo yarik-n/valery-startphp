@@ -1,8 +1,9 @@
 <?php
 $pdo = new PDO('mysql:host=MySQL-8.4;dbname=users', "root", '');
-$sql = "INSERT INTO users (username) VALUES (:username)";
+$sql = 'SELECT * FROM users WHERE id=:id';
 $statment = $pdo->prepare($sql);
-$users = $statment->fetchAll(PDO::FETCH_ASSOC);
+$statment->execute($_GET);
+$user = $statment->fetch(PDO::FETCH_ASSOC);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -18,7 +19,9 @@ $users = $statment->fetchAll(PDO::FETCH_ASSOC);
              <div class="col-md-12">
                  <hd1>Show user</hd1>
 
-             </div>
+
+           </div>
      </div>
 </div>
-
+</body>
+</html>
