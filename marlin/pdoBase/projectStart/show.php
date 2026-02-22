@@ -1,6 +1,6 @@
 <?php
 $pdo = new PDO('mysql:host=MySQL-8.4;dbname=users', "root", '');
-$sql = 'SELECT * FROM users WHERE name = name';
+$sql = 'SELECT * FROM users WHERE id = id';
 $statment = $pdo->prepare($sql);
 $statment->execute($_POST);
 $user = $statment->fetch(PDO::FETCH_ASSOC);
@@ -18,10 +18,11 @@ $user = $statment->fetch(PDO::FETCH_ASSOC);
          <div class="row">
              <div class="col-md-12">
                  <hd1>Show user - <?php echo
-                         $user["name"],
-                         $user["surname"],
-                         $user["username"],
-                         $user["email"]
+                         $user['id'],
+                         $user['name'],
+                         $user['surname'],
+                         $user['username'],
+                         $user['email']
                      ;?></hd1>
 
 
