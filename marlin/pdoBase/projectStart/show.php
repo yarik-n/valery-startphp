@@ -21,13 +21,13 @@ $user = $statment->fetch(PDO::FETCH_ASSOC);
      <div class="container">
          <div class="row">
              <div class="col-md-12">
-                 <hd1>Show user - <?php echo
+                 <h1>Show user - <?php echo
                          $user['id'],
                          $user['name'],
                          $user['surname'],
                          $user['username'],
                          $user['email']
-                     ;?></hd1>
+                     ;?></h1>
 
 
            </div>
