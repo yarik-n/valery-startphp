@@ -26,7 +26,6 @@ $users = $statment->fetchAll(PDO::FETCH_ASSOC);
 			<th>username</th>
 			<th>email</th>
 			</thead>
-
 			<tbody class="tbody">
                 <?php foreach($users as $user):?>
                     <tr>
@@ -35,12 +34,11 @@ $users = $statment->fetchAll(PDO::FETCH_ASSOC);
                         <td><?php echo $user['username'];?></td>
 				        <td><?php echo $user['email'];?></td>
 				        <td>
-					        <a class="btn__show" href="#">Show</a>
+					        <a class="btn__show" href="show.php?id=<? echo $user["id"];?>">Show</a>
 					        <a class="btn__edit" href="#">Edit</a>
 					        <a class="btn__delete" href="#">Delete</a>
 				        </td>
 			        </tr>
-
                 <?php endforeach;?>
 			</tbody>
 		</table>
