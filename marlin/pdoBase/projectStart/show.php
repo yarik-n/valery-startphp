@@ -3,7 +3,7 @@ $exampleArray=[
         'id'=>'2'
 ];
 $pdo = new PDO('mysql:host=MySQL-8.4;dbname=users', "root", '');
-$sql = "SELECT * FROM users WHERE id =: id";
+$sql = "SELECT * FROM users WHERE id = :id";
 $statment = $pdo->prepare($sql);
 $statment->execute($exampleArray);
 $user = $statment->fetch(PDO::FETCH_ASSOC);
