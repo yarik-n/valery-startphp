@@ -38,7 +38,7 @@ $users = $statment->fetchAll(PDO::FETCH_ASSOC);
 				        <td>
 					        <a class="btn__show" href="show.php?id=<?php echo $user['id'];?>">Show</a>
 					        <a class="btn__edit" href="#">Edit</a>
-					        <a class="btn__delete" href="#">Delete</a>
+					        <a class="btn__delete" href="delete.php?id=<?php echo $user['id'];?>">Delete</a>
 				        </td>
 			        </tr>
                 <?php endforeach;?>

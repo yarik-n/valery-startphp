@@ -1,13 +1,9 @@
 <?php
-//$exampleArray=[
-//        'id'=>'1'
-//];
 $pdo = new PDO('mysql:host=MySQL-8.4;dbname=users', "root", '');
 $sql = "SELECT * FROM users WHERE id = :id";
 $statment = $pdo->prepare($sql);
 $statment->execute($_GET);
 $user = $statment->fetch(PDO::FETCH_ASSOC);
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
