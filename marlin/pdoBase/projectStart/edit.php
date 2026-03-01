@@ -5,8 +5,8 @@ $statment = $pdo->prepare($sql);
 $statment->execute($_GET);
 $user = $statment->fetch(PDO::FETCH_ASSOC);
 ?>
-<!DOCTYPE html>
 <html lang="en">
+<!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
