@@ -43,19 +43,35 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <?php $table = [
+                                            [
+                                                    "tags" => "reports file",
+                                                    "name" => "Репорты"
+                                            ],
+                                            [
+                                                    "tags" => "analytics graphs",
+                                                    "name" => "Аналитика"
+                                            ],
+                                            [
+                                                    "tags" => "export download",
+                                                    "name" => "Экспорт"
+                                            ],
+                                            [
+                                                    "tags" => "storage",
+                                                    "name" => "Хранилище"
+                                            ],
+                                            [
+                                                    "tags" => "data",
+                                                    "name" => "Данные"
+                                            ]
+                                    ];
+                                    ?>
                                     <ul id="js-list-msg" class="list-group px-2 pb-2 js-list-filter">
+                                        <?php foreach ($table as $tables) {?>
                                         <li class="list-group-item">
-                                            <span data-filter-tags="reports file">Репорты</span>
+                                            <span data-filter-tags="<?php echo $tables["tags"]?>"><?php echo $tables["name"];?></span>
                                         </li>
-                                        <li class="list-group-item">
-                                            <span data-filter-tags="analytics graphs">Аналитика</span>
-                                        </li>
-                                        <li class="list-group-item">
-                                            <span data-filter-tags="export download">Экспорт</span>
-                                        </li>
-                                        <li class="list-group-item">
-                                            <span data-filter-tags="storage">Хранилище</span>
-                                        </li>
+                                        <?php } ?>
                                     </ul>
                                     <div class="filter-message js-filter-message mt-0 fs-sm"></div>
                                 </div>
