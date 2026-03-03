@@ -48,6 +48,12 @@
                             'value' => 34,
                             'styleClass' => "bg-success-500",
                     ],
+           [
+                            'title' => "Пройдено уроков",
+                            'total' => "77%",
+                            'value' => 77,
+                            'styleClass' => "bg-info-400",
+                    ],
             ]
             ?>
             <div class="panel-container show">
