@@ -52,18 +52,14 @@
                                 ?>
                             </br>
                                 <br>
-                                <big>
                                     <?php
                                     echo $text[3];
                                     ?>
-                                </big>
                             </br>
                                 <br>
-                                    <big>
                                     <?php
                                     echo $text[2];
                                     ?>
-                                    </big>
                                 </br>
                             </div>
                         </div>
