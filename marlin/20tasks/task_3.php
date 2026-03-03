@@ -48,11 +48,17 @@
                             'value' => 34,
                             'styleClass' => "bg-success-500",
                     ],
-           [
+                    [
                             'title' => "Пройдено уроков",
                             'total' => "77%",
                             'value' => 77,
                             'styleClass' => "bg-info-400",
+                    ],
+                    [
+                            'title' => "Осталось дней",
+                            'total' => "2 дня",
+                            'value' => 84,
+                            'styleClass' => "bg-primary-300",
                     ],
             ]
             ?>
@@ -72,23 +78,6 @@
                         </div>
                     <?php }
                     ?>
-
-
-                    <div class="d-flex">
-                        Пройдено уроков
-                        <span class="d-inline-block ml-auto">77%</span>
-                    </div>
-                    <div class="progress progress-sm mb-3">
-                        <div class="progress-bar bg-info-400" role="progressbar" style="width: 77%;" aria-valuenow="77"
-                             aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <div class="d-flex">
-                        Осталось дней
-                        <span class="d-inline-block ml-auto">2 дня</span>
-                    </div>
-                    <div class="progress progress-sm mb-g">
-                        <div class="progress-bar bg-primary-300" role="progressbar" style="width: 84%;"
-                             aria-valuenow="84" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
                 </div>
             </div>
