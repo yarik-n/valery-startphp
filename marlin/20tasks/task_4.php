@@ -37,24 +37,34 @@
                                 <p>Сформируйте массив данных и выведите полностью альбом.</p>
                             </div> -->
                             <div id="js-lightgallery">
-                                <a class="" href="img/demo/gallery/21.jpg">
-                                    <img class="img-responsive" src="img/demo/gallery/thumb/21.jpg" alt="image">
+                                <?php
+                                $item = [
+                                        [
+                                                'url' => 'img/demo/gallery/21.jpg'
+                                        ],
+                                        [
+                                                'url' => 'img/demo/gallery/22.jpg'
+                                        ],
+                                        [
+                                                'url' => 'img/demo/gallery/23.jpg'
+                                        ],
+                                        [
+                                                'url' => 'img/demo/gallery/24.jpg'
+                                        ],
+                                        [
+                                                'url' => 'img/demo/gallery/25.jpg'
+                                        ],
+                                        [
+                                                'url' => 'img/demo/gallery/26.jpg'
+                                        ]
+
+                                ];
+                                foreach ($item as $photo) {
+                                ?>
+                                <a class="" href="<?php echo $photo['url'];?>">
+                                    <img class="img-responsive" src="<?php echo $photo['url'];?>" alt="image">
                                 </a>
-                                <a class="" href="img/demo/gallery/22.jpg">
-                                    <img class="img-responsive" src="img/demo/gallery/thumb/22.jpg" alt="image">
-                                </a>
-                                <a class="" href="img/demo/gallery/23.jpg">
-                                    <img class="img-responsive" src="img/demo/gallery/thumb/23.jpg" alt="image">
-                                </a>
-                                <a class="" href="img/demo/gallery/24.jpg">
-                                    <img class="img-responsive" src="img/demo/gallery/thumb/24.jpg" alt="image">
-                                </a>
-                                <a class="" href="img/demo/gallery/25.jpg">
-                                    <img class="img-responsive" src="img/demo/gallery/thumb/25.jpg" alt="image">
-                                </a>
-                                <a class="" href="img/demo/gallery/26.jpg">
-                                    <img class="img-responsive" src="img/demo/gallery/thumb/26.jpg" alt="image">
-                                </a>
+                                <?php } ?>
                             </div>
                         </div>
                     </div>
