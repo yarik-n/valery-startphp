@@ -44,7 +44,8 @@
                                         $isError = false;
                                     }
 
-                                    if($isError) {?>
+                                    if($isError) {
+                                        unset($_SESSION['isError'])?>
                                          <div class="alert alert-danger fade show" role="alert">
                                                 You should check in on some of those fields below.
                                     </div>
