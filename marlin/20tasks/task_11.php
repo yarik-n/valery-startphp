@@ -36,7 +36,7 @@
                             <div class="panel-content">
                                 <div class="form-group">
                                     <?php
-                                    $_SESSION['test'] = 123;
+
                                     var_dump($_SESSION);
                                     if(isset($_SESSION['isError'])) {
                                         $isError = $_SESSION['isError'];
