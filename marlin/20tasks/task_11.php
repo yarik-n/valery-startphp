@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,10 +35,16 @@
                         <div class="panel-content">
                             <div class="panel-content">
                                 <div class="form-group">
+                                    <?php
+                                    $isValidate = false;
+                                    if($isValidate) {
+                                        echo 'True';
+                                    } else { ?>
                                     <div class="alert alert-danger fade show" role="alert">
                                         You should check in on some of those fields below.
                                     </div>
-                                    <form action="">
+                                    <?php } ?>
+                                    <form action="for_task_11.php" method="POST">
                                         <label class="form-label" for="simpleinput">Text</label>
                                         <input type="text" id="simpleinput" class="form-control">
                                         <button class="btn btn-success mt-3">Submit</button>
@@ -51,13 +58,13 @@
         </main>
         
 
-        <script src="js/vendors.bundle.js"></script>
-        <script src="js/app.bundle.js"></script>
-        <script>
-            // default list filter
-            initApp.listFilter($('#js_default_list'), $('#js_default_list_filter'));
-            // custom response message
-            initApp.listFilter($('#js-list-msg'), $('#js-list-msg-filter'));
-        </script>
-    </body>
+<script src="js/vendors.bundle.js"></script>
+<script src="js/app.bundle.js"></script>
+<script>
+    // default list filter
+    initApp.listFilter($('#js_default_list'), $('#js_default_list_filter'));
+    // custom response message
+    initApp.listFilter($('#js-list-msg'), $('#js-list-msg-filter'));
+</script>
+</body>
 </html>
