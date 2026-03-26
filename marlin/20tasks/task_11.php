@@ -36,7 +36,9 @@
                             <div class="panel-content">
                                 <div class="form-group">
                                     <?php
-                                    $isValidate = false;
+                                    $_SESSION['test'] = 123;
+                                    var_dump($_SESSION);
+                                    $isValidate = $_SESSION['validate'];
                                     if($isValidate) {
                                         echo 'True';
                                     } else { ?>
