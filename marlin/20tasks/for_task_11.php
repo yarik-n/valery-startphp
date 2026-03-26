@@ -1,6 +1,6 @@
 <?php session_start();
 
-$_SESSION['validate'] = false;
+$_SESSION['isError'] = true;
 
 //$pdo = new PDO('mysql:host=MySQL-8.4;dbname=tasks', "root", '');
 //$sql = 'INSERT INTO `task_11`(`name`) VALUES (:username)';

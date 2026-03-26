@@ -38,14 +38,19 @@
                                     <?php
                                     $_SESSION['test'] = 123;
                                     var_dump($_SESSION);
-                                    $isValidate = $_SESSION['validate'];
-                                    if($isValidate) {
-                                        echo 'True';
-                                    } else { ?>
-                                    <div class="alert alert-danger fade show" role="alert">
-                                        You should check in on some of those fields below.
+                                    if(isset($_SESSION['isError'])) {
+                                        $isError = $_SESSION['isError'];
+                                    } else {
+                                        $isError = false;
+                                    }
+
+                                    if($isError) {?>
+                                         <div class="alert alert-danger fade show" role="alert">
+                                                You should check in on some of those fields below.
                                     </div>
-                                    <?php } ?>
+                                    <?php } else {
+                                    echo 'Ошибок нет';
+                                     } ?>
                                     <form action="for_task_11.php" method="POST">
                                         <label class="form-label" for="simpleinput">Text</label>
                                         <input type="text" id="simpleinput" class="form-control">
